@@ -1,0 +1,10 @@
+@media (min-width: 800px){
+  .hamburger{display:none}
+  .navigation{display:block}
+  .navigation ul{display:flex;justify-content:center;gap:.6rem;padding:.5rem}
+
+  .site-header{grid-template-columns:28px auto 44px}
+  .logo{width:28px;height:28px}
+
+  .course-list{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+}
