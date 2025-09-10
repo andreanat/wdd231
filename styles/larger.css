@@ -2,9 +2,19 @@
   .hamburger{display:none}
   .navigation{display:block}
   .navigation ul{display:flex;justify-content:center;gap:.6rem;padding:.5rem}
-
   .site-header{grid-template-columns:28px auto 44px}
   .logo{width:28px;height:28px}
+}
 
-  .course-list{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+@media (min-width: 900px){
+  .home-grid{
+    display:grid;gap:1rem;
+    grid-template-columns:2fr 1fr;
+    grid-template-areas:
+      "hero hero"
+      "courses resources";
+  }
+  .hero{grid-area:hero}
+  .courses{grid-area:courses}
+  .resources{grid-area:resources}
 }
