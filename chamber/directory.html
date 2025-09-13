@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chamber Directory</title>
+  <meta name="description" content="Local chamber of commerce member directory with grid/list view.">
+  <meta name="author" content="Andrea Natalia">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="stylesheet" href="styles/directory.css">
+  <script defer src="scripts/directory.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Member Directory</h1>
+    <nav aria-label="Primary">
+      <ul class="nav">
+        <li><a href="../">Home</a></li>
+        <li class="current"><a href="./directory.html" aria-current="page">Directory</a></li>
+      </ul>
+    </nav>
+
+    <div class="view-toggle" role="group" aria-label="Change directory view">
+      <button id="gridBtn" class="active" aria-pressed="true" type="button">Grid</button>
+      <button id="listBtn" aria-pressed="false" type="button">List</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="directory" class="cards" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Chamber Directory</p>
+    <p id="lastModified"></p>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById('lastModified').textContent = 'Last modified: ' + document.lastModified;
+    </script>
+  </footer>
+</body>
+</html>

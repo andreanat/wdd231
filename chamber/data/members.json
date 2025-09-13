@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Sunrise Cafe",
+    "address": "123 Main St, Centro",
+    "phone": "(555) 123-4567",
+    "url": "https://example.com/sunrise",
+    "image": "images/members/sunrise.webp",
+    "membership": "Gold"
+  },
+  {
+    "name": "Luna Fitness",
+    "address": "22 West Ave, Norte",
+    "phone": "(555) 777-8888",
+    "url": "https://example.com/luna",
+    "image": "images/members/luna.webp",
+    "membership": "Silver"
+  },
+  {
+    "name": "Oasis Florals",
+    "address": "5 Garden Rd, Este",
+    "phone": "(555) 222-3344",
+    "url": "https://example.com/oasis",
+    "image": "images/members/oasis.webp",
+    "membership": "Bronze"
+  },
+  {
+    "name": "Metro Tech Repair",
+    "address": "89 Circuit Blvd, Parque",
+    "phone": "(555) 909-1011",
+    "url": "https://example.com/metro",
+    "image": "images/members/metro.webp",
+    "membership": "Gold"
+  },
+  {
+    "name": "GreenLeaf Market",
+    "address": "441 Harvest Ln, Sur",
+    "phone": "(555) 515-2525",
+    "url": "https://example.com/greenleaf",
+    "image": "images/members/greenleaf.webp",
+    "membership": "Silver"
+  },
+  {
+    "name": "Azul Print Studio",
+    "address": "301 Color St, Centro",
+    "phone": "(555) 313-1415",
+    "url": "https://example.com/azul",
+    "image": "images/members/azul.webp",
+    "membership": "Bronze"
+  },
+  {
+    "name": "Sierra Outdoor Co.",
+    "address": "77 Summit Ave, Norte",
+    "phone": "(555) 818-2022",
+    "url": "https://example.com/sierra",
+    "image": "images/members/sierra.webp",
+    "membership": "Gold"
+  }
+]
