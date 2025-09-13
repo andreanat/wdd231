@@ -1,0 +1,28 @@
+{
+  "familyName": "Muñoz Baca",
+  "movedInDate": "2024-07-15",
+  "numberOfPeople": 4,
+  "visitedByBishopric": true,
+  "members": [
+    {
+      "name": "Andrea Natalia Muñoz Baca",
+      "gender": "Female",
+      "birthdate": "2002-07-02"
+    },
+    {
+      "name": "Juan Muñoz",
+      "gender": "Male",
+      "birthdate": "1970-05-10"
+    },
+    {
+      "name": "María Baca",
+      "gender": "Female",
+      "birthdate": "1972-11-20"
+    },
+    {
+      "name": "Luis Muñoz",
+      "gender": "Male",
+      "birthdate": "2005-03-04"
+    }
+  ]
+}
