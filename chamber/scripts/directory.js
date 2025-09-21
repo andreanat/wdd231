@@ -1,58 +1,94 @@
-const container = document.getElementById('directory');
-const gridBtn = document.getElementById('gridBtn');
-const listBtn = document.getElementById('listBtn');
+const url = 'data/members.json';
+const cards = document.querySelector('#cards');
 
-const DATA_URL = 'data/members.json';
+const badgeColor = lvl =>
+  lvl >= 3 ? '#ff66aa' : lvl === 2 ? '#66b8ff' : '#8bd17c';
+
+const displayProphets = (members) => {
+  cards.className = 'cards grid';
+
+  members.forEach((member) => {
+    const card = document.createElement('section');
+    card.className = 'card';
+
+    const imgWrap = document.createElement('div');
+    imgWrap.className = 'logo-wrap';
+
+    const portrait = document.createElement('img');
+    portrait.className = 'logo';
+    portrait.setAttribute('width', '96');
+    portrait.setAttribute('height', '96');
+    portrait.setAttribute('loading', 'lazy');
+
+    portrait.src = member.image;
+    portrait.alt = `${member.name} logo`;
+
+    portrait.addEventListener('error', () => {
+      console.error('Image failed to load:', portrait.src);
+      portrait.src = 'images/logo.svg';         // fallback
+      portrait.alt = `${member.name} logo not available`;
+    });
+
+    imgWrap.appendChild(portrait);
+
+    const h3 = document.createElement('h3');
+    h3.textContent = member.name;
+
+    const badge = document.createElement('span');
+    badge.className = 'badge';
+    badge.textContent = member.membership ?? '';
+    badge.style.background = badgeColor(member.membership ?? 1);
+
+    const addr = document.createElement('p');
+    addr.className = 'muted';
+    addr.textContent = member.address;
+
+    const phone = document.createElement('p');
+    phone.className = 'muted';
+    phone.textContent = member.phone;
+
+    const site = document.createElement('a');
+    site.className = 'btn';
+    site.href = member.website;
+    site.target = '_blank';
+    site.rel = 'noopener';
+    site.textContent = 'Website';
+
+    card.appendChild(imgWrap);
+    card.appendChild(h3);
+    card.appendChild(badge);
+    card.appendChild(addr);
+    card.appendChild(phone);
+    card.appendChild(site);
+
+    cards.appendChild(card);
+  });
+};
 
 async function getMembers() {
-  const res = await fetch(DATA_URL, { cache: 'no-store' });
-  if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-  return res.json();
-}
-
-function telHref(phoneRaw) {
-  return 'tel:' + (phoneRaw || '').replace(/[^0-9+]/g, '');
-}
-
-function cardHTML(m) {
-  return `
-    <article class="card">
-      <header>
-        <img class="logo" src="${m.image}" alt="${m.name} logo" loading="lazy" width="52" height="52">
-        <h3 class="name">${m.name}</h3>
-        <span class="badge">${m.membership}</span>
-      </header>
-      <p class="meta">${m.address}</p>
-      <p class="meta"><a href="${telHref(m.phone)}">${m.phone}</a></p>
-      <p class="meta">
-        <a href="${m.url}" target="_blank" rel="noopener">Website</a>
-      </p>
-    </article>
-  `;
-}
-
-function render(list) {
-  container.innerHTML = list.map(cardHTML).join('');
-}
-
-function setView(mode) {
-  const isList = mode === 'list';
-  container.classList.toggle('list', isList);
-  gridBtn.classList.toggle('active', !isList);
-  listBtn.classList.toggle('active', isList);
-  gridBtn.setAttribute('aria-pressed', String(!isList));
-  listBtn.setAttribute('aria-pressed', String(isList));
-}
-
-(async () => {
   try {
-    const members = await getMembers();
-    render(members);
-    setView('grid');
-  } catch (e) {
-    container.innerHTML = '<p>Could not load the directory right now.</p>';
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    console.table(data.members.map(m => ({ name: m.name, image: m.image })));
+    displayProphets(data.members);
+  } catch (err) {
+    console.error('Fetch/parse error:', err);
+    cards.textContent = 'Unable to load member directory.';
   }
-})();
+}
 
-gridBtn.addEventListener('click', () => setView('grid'));
-listBtn.addEventListener('click', () => setView('list'));
+getMembers();
+
+document.getElementById('btnGrid')?.addEventListener('click', () => {
+  cards.classList.remove('list');
+  cards.classList.add('grid');
+});
+document.getElementById('btnList')?.addEventListener('click', () => {
+  cards.classList.remove('grid');
+  cards.classList.add('list');
+});
+
+const year = new Date().getFullYear();
+document.getElementById('copyright').textContent = `© ${year} • WDD 231`;
+document.getElementById('lastModified').textContent = `Last modified: ${document.lastModified}`;

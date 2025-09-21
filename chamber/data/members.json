@@ -1,58 +1,76 @@
-[
+{
+  "members": [
   {
-    "name": "Sunrise Cafe",
-    "address": "123 Main St, Centro",
-    "phone": "(555) 123-4567",
-    "url": "https://example.com/sunrise",
-    "image": "images/members/sunrise.webp",
-    "membership": "Gold"
+    "name": "Cafetería Amanecer",
+    "address": "Av. Reforma 101, Col. Centro, CDMX",
+    "phone": "(55) 1234 5678",
+    "website": "https://ejemplo.mx/amanecer",
+    "image": "images/members/cafeteria-amanecer.webp",
+    "membership": 3
   },
   {
-    "name": "Luna Fitness",
-    "address": "22 West Ave, Norte",
-    "phone": "(555) 777-8888",
-    "url": "https://example.com/luna",
-    "image": "images/members/luna.webp",
-    "membership": "Silver"
+    "name": "Clínica Luna Fitness",
+    "address": "Av. Norte 22, Lindavista, CDMX",
+    "phone": "(55) 7777 8888",
+    "website": "https://ejemplo.mx/lunafitness",
+    "image": "images/members/clinica-luna-fitness.webp",
+    "membership": 2
   },
   {
-    "name": "Oasis Florals",
-    "address": "5 Garden Rd, Este",
-    "phone": "(555) 222-3344",
-    "url": "https://example.com/oasis",
-    "image": "images/members/oasis.webp",
-    "membership": "Bronze"
+    "name": "Estudio Azul Reparaciones",
+    "address": "Calle Talleres 45, Industrial Vallejo, CDMX",
+    "phone": "(55) 5522 3344",
+    "website": "https://ejemplo.mx/estudio-azul",
+    "image": "images/members/estudio-azul-reparaciones.webp",
+    "membership": 2
   },
   {
-    "name": "Metro Tech Repair",
-    "address": "89 Circuit Blvd, Parque",
-    "phone": "(555) 909-1011",
-    "url": "https://example.com/metro",
-    "image": "images/members/metro.webp",
-    "membership": "Gold"
+    "name": "Flores Oasis",
+    "address": "Calle Jardín 5, Coyoacán, CDMX",
+    "phone": "(55) 2222 3344",
+    "website": "https://ejemplo.mx/flores-oasis",
+    "image": "images/members/flores-oasis.webp",
+    "membership": 2
   },
   {
-    "name": "GreenLeaf Market",
-    "address": "441 Harvest Ln, Sur",
-    "phone": "(555) 515-2525",
-    "url": "https://example.com/greenleaf",
-    "image": "images/members/greenleaf.webp",
-    "membership": "Silver"
+    "name": "Mercado Verde",
+    "address": "Calle Harvest 441, Roma Sur, CDMX",
+    "phone": "(55) 5151 2525",
+    "website": "https://ejemplo.mx/mercado-verde",
+    "image": "images/members/mercado-verde.webp",
+    "membership": 2
   },
   {
-    "name": "Azul Print Studio",
-    "address": "301 Color St, Centro",
-    "phone": "(555) 313-1415",
-    "url": "https://example.com/azul",
-    "image": "images/members/azul.webp",
-    "membership": "Bronze"
+    "name": "Panadería Dulce Estrella",
+    "address": "Calle Pan 18, Portales, CDMX",
+    "phone": "(55) 8899 7766",
+    "website": "https://ejemplo.mx/dulce-estrella",
+    "image": "images/members/panaderia-dulce-estrella.webp",
+    "membership": 3
   },
   {
-    "name": "Sierra Outdoor Co.",
-    "address": "77 Summit Ave, Norte",
-    "phone": "(555) 818-2022",
-    "url": "https://example.com/sierra",
-    "image": "images/members/sierra.webp",
-    "membership": "Gold"
+    "name": "Sierra Outdoor México",
+    "address": "Av. Summit 77, Naucalpan, Edo. Méx.",
+    "phone": "(55) 8181 2022",
+    "website": "https://ejemplo.mx/sierra-outdoor",
+    "image": "images/members/sierra-outdoor-mexico.webp",
+    "membership": 1
+  },
+  {
+    "name": "Tecno Metro Reparaciones",
+    "address": "Circuito Interior 89, Azcapotzalco, CDMX",
+    "phone": "(55) 9090 1011",
+    "website": "https://ejemplo.mx/tecno-metro",
+    "image": "images/members/tecno-metro-reparaciones.webp",
+    "membership": 3
+  },
+  {
+    "name": "Tortillería La Abuela",
+    "address": "Calle Maíz 12, Iztapalapa, CDMX",
+    "phone": "(55) 3344 5566",
+    "website": "https://ejemplo.mx/la-abuela",
+    "image": "images/members/tortilleria-la-abuela.webp",
+    "membership": 1
   }
-]
+  ]
+}
