@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>ES Modules Demo — Enrollment</title>
+  <meta name="description" content="Practice modular JavaScript with ES Modules: import/export, DOM rendering, and event-driven updates.">
+  <meta name="author" content="Andrea Natalia">
+
+  <link rel="icon" href="../chamber/favicon.ico">
+
+  <!-- (Optional) Normalize if you have it at repo root -->
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/modules.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 id="courseTitle">Course</h1>
+  </header>
+
+  <main>
+    <section class="controls" aria-labelledby="enroll-heading">
+      <h2 id="enroll-heading">Manage Enrollment</h2>
+
+      <label for="sectionNumber">Section</label>
+      <select id="sectionNumber" aria-label="Choose section"></select>
+
+      <div class="buttons" role="group" aria-label="Enrollment actions">
+        <button id="enrollStudent" type="button">Enroll +1</button>
+        <button id="dropStudent" type="button">Drop −1</button>
+      </div>
+      <p class="hint">No form is used here to avoid a page refresh—buttons trigger JS handlers directly.</p>
+    </section>
+
+    <section class="output" aria-labelledby="list-heading">
+      <h2 id="list-heading">Sections</h2>
+      <div id="outputSections" class="cards"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Modules Practice</strong> • WDD 231 • <span id="year"></span></p>
+  </footer>
+
+  <script type="module" src="scripts/modules.mjs"></script>
+</body>
+</html>
