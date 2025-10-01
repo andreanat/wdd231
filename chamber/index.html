@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>Andrea’s Chamber — Home</title>
+  <meta name="description" content="Welcome to Andrea’s Chamber of Commerce. Join local businesses, view events, check the weather, and see our featured members.">
+  <meta name="author" content="Andrea Natalia">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="stylesheet" href="styles/directory.css">
+  <link rel="stylesheet" href="styles/home.css">
+
+  <meta property="og:title" content="Andrea’s Chamber — Home">
+  <meta property="og:description" content="Business community in Mexico City. Events, weather, and featured members. Join today!">
+  <meta property="og:image" content="images/og-cover.jpg">
+  <meta property="og:url" content="https://andreanat.github.io/wdd231/chamber/">
+  <meta property="og:type" content="website">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a class="logo" href="../index.html" aria-label="Andrea’s Chamber Home">AC</a>
+      <span class="brand-name">Andrea’s Chamber</span>
+    </div>
+
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Chamber</a></li>
+        <li><a href="directory.html">Directory</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-label="Welcome banner">
+      <img class="hero-img" src="images/hero.jpg" alt="Mexico City skyline at sunset" loading="eager" decoding="async">
+      <div class="hero-content">
+        <h1>Grow with Our Business Community</h1>
+        <p>Resources, networking, and real opportunities in CDMX.</p>
+        <a class="cta" href="join.html" aria-label="Join the chamber">Join the Chamber</a>
+      </div>
+    </section>
+
+    <section class="home-grid">
+      <article class="card events" aria-labelledby="events-title">
+        <h2 id="events-title">Current Events</h2>
+        <ul class="events-list">
+          <li>
+            <h3>After-Hours Networking</h3>
+            <p>Thu 7:00 PM • Roma Norte</p>
+          </li>
+          <li>
+            <h3>Small Biz Workshop</h3>
+            <p>Sat 10:00 AM • Centro</p>
+          </li>
+        </ul>
+        <a class="more" href="events.html">See all events</a>
+      </article>
+
+      <article class="card weather" aria-labelledby="weather-title">
+        <h2 id="weather-title">Weather — Mexico City</h2>
+        <div class="current">
+          <div class="temp-line">
+            <img id="weather-icon" alt="" width="64" height="64">
+            <p><span id="current-temp" aria-live="polite">--</span>°<span id="unit">C</span></p>
+          </div>
+          <p id="current-desc">—</p>
+        </div>
+        <div class="forecast" aria-label="3-day forecast">
+        </div>
+        <small class="weather-note">Data: OpenWeatherMap</small>
+      </article>
+
+      <article class="card spotlights" aria-labelledby="spot-title">
+        <h2 id="spot-title">Member Spotlights</h2>
+        <div id="spotlight-wrap" class="spotlight-wrap" aria-live="polite">
+        </div>
+        <a class="more" href="directory.html">Browse all members</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Andrea’s Chamber</strong> • Mexico City, MX •
+      <a href="mailto:andrea.nmb13@gmail.com">andrea.nmb13@gmail.com</a>
+    </p>
+    <p id="copyright"></p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script type="module" src="scripts/home.js"></script>
+</body>
+</html>
