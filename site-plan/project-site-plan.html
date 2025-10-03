@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mata Ortiz Pottery Guide — Project Site Plan</title>
+  <meta name="description" content="Site plan for a three-page project about Mata Ortiz pottery: purpose, audience scenarios, color scheme, typography, and home page wireframes.">
+  <meta name="author" content="Andrea Natalia">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/site-plan.css">
+
+  <meta property="og:title" content="Mata Ortiz Pottery Guide — Site Plan">
+  <meta property="og:description" content="Project site plan: name, purpose, scenarios, color schema, typography, and wireframes.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">MO</span>
+      <span class="brand-name">Mata Ortiz Pottery Guide</span>
+      <span class="tag">Project Site Plan</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Project Site Plan</h1>
+
+    <section aria-labelledby="site-name">
+      <h2 id="site-name">Site Name</h2>
+      <p><strong>Mata Ortiz Pottery Guide</strong></p>
+      <ul>
+        <li>The name clearly communicates the subject (Mata Ortiz) and the focus (guide/education & visiting).</li>
+        <li>Concise, memorable, and suitable for branding and a logo monogram (MO).</li>
+      </ul>
+      <p class="muted">Optional domain idea: <code>mataortiz.art</code> or <code>visitmataortiz.com</code></p>
+    </section>
+
+    <section aria-labelledby="purpose">
+      <h2 id="purpose">Site Purpose</h2>
+      <p>
+        Present a welcoming, modern resource that introduces the <em>ceramic tradition of Mata Ortiz</em> in Chihuahua, Mexico.
+        The site provides: a brief history and cultural context, profiles of artists and styles, a beginner’s visit guide
+        (how to get there, etiquette, safety), and ethical buying tips to support artisans directly.
+      </p>
+    </section>
+
+    <section aria-labelledby="scenarios">
+      <h2 id="scenarios">Audience Scenarios</h2>
+      <ul class="scenario-list">
+        <li><strong>Traveler:</strong> “How do I visit Mata Ortiz, and what should I expect when meeting artists in their studios?”</li>
+        <li><strong>Collector:</strong> “How can I tell authentic Mata Ortiz pottery from reproductions, and what are fair price ranges?”</li>
+        <li><strong>Student:</strong> “Who are the key artists and styles, and where can I find images and short bios for a class project?”</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="colors">
+      <h2 id="colors">Color Schema</h2>
+      <p>Earthy, high-contrast palette inspired by clay, slip, and desert light. Used consistently across headings, accents, and backgrounds.</p>
+
+      <div class="swatches" role="list">
+        <figure class="swatch" role="listitem" aria-label="Terracotta swatch">
+          <div class="chip chip--terra" aria-hidden="true"></div>
+          <figcaption><strong>Terracotta</strong><br><code>#C4623A</code><br><span class="use">Primary accents, buttons, links.</span></figcaption>
+        </figure>
+
+        <figure class="swatch" role="listitem" aria-label="Charcoal swatch">
+          <div class="chip chip--charcoal" aria-hidden="true"></div>
+          <figcaption><strong>Charcoal</strong><br><code>#2B2B2B</code><br><span class="use">Headings, body text.</span></figcaption>
+        </figure>
+
+        <figure class="swatch" role="listitem" aria-label="Sand swatch">
+          <div class="chip chip--sand" aria-hidden="true"></div>
+          <figcaption><strong>Sand</strong><br><code>#F3E8DA</code><br><span class="use">Page background, sections.</span></figcaption>
+        </figure>
+
+        <figure class="swatch" role="listitem" aria-label="Clay Gray swatch">
+          <div class="chip chip--clay" aria-hidden="true"></div>
+          <figcaption><strong>Clay Gray</strong><br><code>#7E6F68</code><br><span class="use">Borders, subtle UI.</span></figcaption>
+        </figure>
+      </div>
+
+      <p class="contrast-note">Chosen to meet AA contrast for text on Sand &amp; white backgrounds.</p>
+    </section>
+
+    <section aria-labelledby="type">
+      <h2 id="type">Typography</h2>
+      <ul class="type-usage">
+        <li><strong>Headings:</strong> <span class="font-demo font-serif">Playfair Display</span> (elegant, heritage vibe)</li>
+        <li><strong>Body &amp; UI:</strong> <span class="font-demo font-sans">Inter</span> (legible, modern UI)</li>
+      </ul>
+
+      <article class="type-cards">
+        <div class="type-card">
+          <h3>Heading Sample</h3>
+          <p class="font-serif sample-xl">Mata Ortiz: Clay, Fire, and Form</p>
+        </div>
+        <div class="type-card">
+          <h3>Body Sample</h3>
+          <p class="font-sans sample-body">
+            The village of Mata Ortiz revived ancient Paquimé ceramic traditions in contemporary forms,
+            producing world-renowned pottery characterized by fine coils, hand burnishing, and intricate slip designs.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="wireframes">
+      <h2 id="wireframes">Wireframe: Home Page</h2>
+
+      <div class="wireframes">
+        <figure>
+          <figcaption>Mobile (320–480px)</figcaption>
+          <svg viewBox="0 0 240 420" class="wf-svg" role="img" aria-label="Mobile wireframe">
+            <rect x="10" y="10" width="220" height="40" class="wf-rect" />  
+            <rect x="10" y="60" width="220" height="90" class="wf-hero" />    
+            <rect x="10" y="160" width="220" height="70" class="wf-rect" />  
+            <rect x="10" y="240" width="220" height="70" class="wf-rect" /> 
+            <rect x="10" y="320" width="220" height="70" class="wf-rect" />  
+          </svg>
+        </figure>
+
+        <figure>
+          <figcaption>Desktop (≥1024px)</figcaption>
+          <svg viewBox="0 0 640 360" class="wf-svg" role="img" aria-label="Desktop wireframe">
+            <rect x="10" y="10" width="620" height="40" class="wf-rect" />  
+            <rect x="10" y="60" width="380" height="130" class="wf-hero" />    
+            <rect x="400" y="60" width="230" height="130" class="wf-rect" />   
+            <rect x="10" y="200" width="195" height="140" class="wf-rect" />  
+            <rect x="222" y="200" width="195" height="140" class="wf-rect" /> 
+            <rect x="430" y="200" width="200" height="140" class="wf-rect" />   
+          </svg>
+        </figure>
+      </div>
+
+      <ul class="wire-notes">
+        <li><strong>Hero:</strong> welcoming photo/illustration + “Plan your visit” button.</li>
+        <li><strong>Sections:</strong> short intro, featured artists, styles gallery, visit tips.</li>
+        <li><strong>Global:</strong> consistent header/nav/footer reused across pages.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="pages">
+      <h2 id="pages">Planned Pages</h2>
+      <ol>
+        <li><strong>Home:</strong> overview + CTA to plan a visit</li>
+        <li><strong>Artists &amp; Styles:</strong> short bios, images, motifs</li>
+        <li><strong>Plan Your Visit:</strong> how to get there, etiquette, where to buy ethically</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Andrea Natalia • WDD 231</p>
+    <p class="muted">Last modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
