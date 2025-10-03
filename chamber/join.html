@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join the Chamber — Andrea’s Chamber</title>
+  <meta name="description" content="Apply to join Andrea’s Chamber. Choose a membership level and submit your organization details.">
+  <meta name="author" content="Andrea Natalia">
+
+  <link rel="icon" href="favicon.ico">
+  <meta property="og:title" content="Join the Chamber — Andrea’s Chamber">
+  <meta property="og:description" content="Become a member and grow with our local business community.">
+  <meta property="og:url" content="https://andreanat.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="stylesheet" href="styles/join.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a class="logo" href="../index.html" aria-label="Andrea’s Chamber Home">AC</a>
+      <span class="brand-name">Andrea’s Chamber</span>
+    </div>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li class="current"><a href="join.html" aria-current="page">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="grid">
+    <section class="apply">
+      <h1>Chamber Membership Application</h1>
+
+      <form id="joinForm" method="get" action="thankyou.html" novalidate>
+
+        <label>
+          <span>First name</span>
+          <input
+            type="text"
+            name="firstName"
+            title="Enter your given (first) name"
+            autocomplete="given-name"
+            required>
+        </label>
+
+        <label>
+          <span>Last name</span>
+          <input
+            type="text"
+            name="lastName"
+            title="Enter your family (last) name"
+            autocomplete="family-name"
+            required>
+        </label>
+
+        <label>
+          <span>Organizational title</span>
+          <input
+            type="text"
+            name="orgTitle"
+            title="Your title in the organization (letters, hyphens, and spaces; at least 7 characters)"
+            autocomplete="organization-title"
+            pattern="[A-Za-z \-]{7,}"
+            placeholder="e.g., Marketing Lead"
+          >
+          <small class="hint">Letters, spaces, and hyphens only; minimum 7 characters.</small>
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input
+            type="email"
+            name="email"
+            title="Enter a valid email address"
+            autocomplete="email"
+            placeholder="name@example.com"
+            required>
+        </label>
+
+        <label>
+          <span>Mobile phone</span>
+          <input
+            type="tel"
+            name="mobile"
+            title="Enter your mobile number"
+            autocomplete="tel"
+            inputmode="tel"
+            required>
+        </label>
+
+        <label>
+          <span>Business/Organization name</span>
+          <input
+            type="text"
+            name="organization"
+            title="Enter your organization name"
+            autocomplete="organization"
+            required>
+        </label>
+
+        <fieldset class="levels">
+          <legend>Choose a membership level</legend>
+
+          <label class="level-option">
+            <input type="radio" name="membership" value="NP" required>
+            <span>NP — Non-Profit (no fee)</span>
+          </label>
+
+          <label class="level-option">
+            <input type="radio" name="membership" value="Bronze">
+            <span>Bronze</span>
+          </label>
+
+          <label class="level-option">
+            <input type="radio" name="membership" value="Silver">
+            <span>Silver</span>
+          </label>
+
+          <label class="level-option">
+            <input type="radio" name="membership" value="Gold">
+            <span>Gold</span>
+          </label>
+        </fieldset>
+
+        <label>
+          <span>Business/Organization description</span>
+          <textarea
+            name="description"
+            title="Describe your organization"
+            rows="5"
+            autocomplete="off"
+            placeholder="What do you do? Products/services, years in business, goals with the chamber, etc."></textarea>
+        </label>
+
+        <input type="hidden" name="timestamp" id="timestamp">
+
+        <div class="actions">
+          <button type="submit" class="btn">Submit application</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="benefits">
+      <h2>Membership Levels & Benefits</h2>
+
+      <div class="cards">
+        <article class="benefit-card fadein" style="--d:0s">
+          <h3>NP — Non-Profit</h3>
+          <p>Free membership for registered non-profits. Essential visibility & community access.</p>
+          <button class="link-btn" data-open="dlg-np" type="button">View benefits</button>
+        </article>
+
+        <article class="benefit-card fadein" style="--d:.1s">
+          <h3>Bronze</h3>
+          <p>Starter plan for small businesses ready to connect and grow.</p>
+          <button class="link-btn" data-open="dlg-bronze" type="button">View benefits</button>
+        </article>
+
+        <article class="benefit-card fadein" style="--d:.2s">
+          <h3>Silver</h3>
+          <p>Amplified promotion and event discounts to boost your reach.</p>
+          <button class="link-btn" data-open="dlg-silver" type="button">View benefits</button>
+        </article>
+
+        <article class="benefit-card fadein" style="--d:.3s">
+          <h3>Gold</h3>
+          <p>Premium visibility, spotlight placement, and highest tier perks.</p>
+          <button class="link-btn" data-open="dlg-gold" type="button">View benefits</button>
+        </article>
+      </div>
+    </aside>
+
+    <dialog id="dlg-np" aria-labelledby="np-title">
+      <button class="modal-close" data-close type="button" aria-label="Close">✕</button>
+      <h3 id="np-title">NP — Non-Profit Benefits</h3>
+      <ul>
+        <li>Free listing in the directory</li>
+        <li>Access to community events calendar</li>
+        <li>Monthly newsletter mention (rotating)</li>
+      </ul>
+      <button class="btn" data-close type="button">Close</button>
+    </dialog>
+
+    <dialog id="dlg-bronze" aria-labelledby="bronze-title">
+      <button class="modal-close" data-close type="button" aria-label="Close">✕</button>
+      <h3 id="bronze-title">Bronze Benefits</h3>
+      <ul>
+        <li>All NP benefits</li>
+        <li>Ribbon-cutting photo share</li>
+        <li>5% event discount</li>
+        <li>Social media welcome post</li>
+      </ul>
+      <button class="btn" data-close type="button">Close</button>
+    </dialog>
+
+    <dialog id="dlg-silver" aria-labelledby="silver-title">
+      <button class="modal-close" data-close type="button" aria-label="Close">✕</button>
+      <h3 id="silver-title">Silver Benefits</h3>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>Homepage spotlight (rotating)</li>
+        <li>10% event discount</li>
+        <li>Job board priority</li>
+      </ul>
+      <button class="btn" data-close type="button">Close</button>
+    </dialog>
+
+    <dialog id="dlg-gold" aria-labelledby="gold-title">
+      <button class="modal-close" data-close type="button" aria-label="Close">✕</button>
+      <h3 id="gold-title">Gold Benefits</h3>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Permanent spotlight placement</li>
+        <li>20% event discount</li>
+        <li>Featured newsletter story</li>
+      </ul>
+      <button class="btn" data-close type="button">Close</button>
+    </dialog>
+
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Andrea’s Chamber</strong> • Mexico City, MX •
+      <a href="mailto:andrea.nmb13@gmail.com">andrea.nmb13@gmail.com</a>
+    </p>
+    <p id="copyright"></p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/join.js" defer></script>
+</body>
+</html>
