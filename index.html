@@ -7,18 +7,19 @@
   <meta name="description" content="WDD 231 course home page: activities, resources, and certificate courses.">
   <meta name="author" content="Andrea Natalia">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
-  
+
   <script defer src="scripts/navigation.js"></script>
   <script defer src="scripts/date.js"></script>
   <script defer src="scripts/courses.js"></script>
   <script defer src="scripts/render-courses.js"></script>
+  <script defer src="scripts/course-modal.js"></script>
 
   <link rel="icon" href="favicon.ico">
   <meta property="og:title" content="Andrea Natalia – WDD 231 Course Home Page">
@@ -32,11 +33,10 @@
   <meta name="twitter:title" content="Andrea Natalia – WDD 231 Course Home Page">
   <meta name="twitter:description" content="My BYU-Idaho Frontend Development (WDD 231) home page: projects, chamber site, and course work.">
   <meta name="twitter:image" content="https://andreanat.github.io/wdd231/images/PinkStars.jpg">
-  
 </head>
 <body>
   <header class="site-header">
-    <img src="images/logo.svg" alt="site logo" width="1" height="1" class="logo">
+    <img src="images/logo.svg" alt="site logo" width="40" height="40" class="logo">
     <span class="site-name">Andrea Natalia</span>
     <button id="nav-button" class="hamburger" aria-label="navigation" aria-controls="primary-nav" aria-expanded="false"></button>
   </header>
@@ -49,8 +49,25 @@
     </ul>
   </nav>
 
+  <dialog id="courseModal" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+    <button class="modal__close" type="button" data-close-modal aria-label="Close dialog">✕</button>
+    <article class="modal__body">
+      <header>
+        <h2 id="modalTitle"></h2>
+      </header>
+      <div id="modalDescription" class="modal__content"></div>
+      <p><strong>Credits:</strong> <span id="modalCredits"></span></p>
+      <p><strong>Certificate:</strong> <span id="modalCert"></span></p>
+      <p><strong>Tech stack:</strong> <span id="modalStack"></span></p>
+      <footer class="modal__footer">
+        <button class="btn" type="button" data-close-modal>Close</button>
+      </footer>
+    </article>
+  </dialog>
+
   <main class="home-grid">
     <h1>WDD 231 – Web Frontend Development</h1>
+
     <section class="hero block">
       <h2>Welcome</h2>
       <p>This page hosts my WDD 231 activities, resources, and certificate plan.</p>
@@ -58,15 +75,12 @@
 
     <section class="courses block">
       <h2>Certificate Courses</h2>
-
       <div class="filters" role="group" aria-label="Filter courses by subject">
         <button class="filter-btn active" data-filter="all">All Courses</button>
         <button class="filter-btn" data-filter="WDD">WDD</button>
         <button class="filter-btn" data-filter="CSE">CSE</button>
       </div>
-
       <div id="course-list" class="course-list" aria-live="polite"></div>
-
       <div class="totals">
         <strong>Total credits:</strong> <span id="credit-total">0</span>
         <span class="legend"><span class="dot done"></span> Completed</span>
@@ -90,6 +104,5 @@
     <p>© <span id="year"></span> Andrea Natalia • Mexico</p>
     <p id="lastModified"></p>
   </footer>
-
 </body>
 </html>
